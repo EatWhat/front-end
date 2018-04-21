@@ -108,12 +108,11 @@
 | food_id       | true     | number        | 食品ID，用于索引食品   |
 | food_type     | true     | string        | 食品类型，用于分类食品 |
 | food_name     | true     | string        | 食品名称               |
-| price         | true     | number        | 食品价格               |
 | num           | true     | number        | 食品剩余数量           |
 | image_url     | true     | string        | 食品图片URL            |
 | detail        | true     | string        | 食品描述               |
 
-
+> 食品总价由后端计算
 
 ## 2.4 示例数据
 
