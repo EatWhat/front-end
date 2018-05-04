@@ -1,0 +1,64 @@
+ /*order.wxss*/
+
+.container {
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+.userinfo {
+  margin: 0 5px 5px 5px;
+  border-top: 5px solid #EEEEEE;
+  justify-content: space-around;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.userinfo-detail {
+  overflow: hidden;
+  width: 200px;
+}
+
+.userinfo-name {
+  display: inline-block;
+}
+
+.userinfo-phone {
+  display: inline-block;
+}
+
+.picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color:white;
+  margin:5px;
+}
+
+.column {
+  display: flex;
+  background-color:white;
+}
+
+.row {
+  display: block;
+  margin: 0;
+  background-color:white;
+}
+
+.name-number {
+  justify-content: space-around;
+}
+
+.shop-list {
+  margin:5px;
+  border-bottom:5px solid #EEEEEE;
+}
+
+.shop-item {
+  justify-content:space-around;
+}

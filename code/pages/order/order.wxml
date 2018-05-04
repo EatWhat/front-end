@@ -1,0 +1,45 @@
+ <!--order-->
+<view class="container">
+  <view class="column userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class="row userinfo-detail">
+      <view class="column name-number">
+        <view>
+          {{userDetailInfo.name}}
+        </view>
+        <view>
+          {{userDetailInfo.phone}}
+        </view>
+      </view>
+      <view>
+        {{userDetailInfo.address}}
+      </view>
+    </view>
+  </view>
+
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <view>支付方式</view>  
+      <view>{{array[index]}}</view>
+    </view>
+  </picker>
+
+  <view class="shop-list row">
+    <block wx:for="{{shoppingCart}}">
+      <view class="shop-item column">
+        <view>{{item.food_name}}</view>
+        <view>{{item.price}}</view>
+        <view>{{item.amount}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="">
+    总价：{{totalPrice}}
+  </view>
+
+  <button class="" bindtap="submitOrder">
+    提交订单
+  </button>
+</view>  
+
