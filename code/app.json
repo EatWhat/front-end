@@ -2,6 +2,7 @@
   "pages":[
     "pages/menu/menu",
     "pages/order/order",
+    "pages/shoppingList/shoppingList",
     "pages/logs/logs"
   ],
   "window":{
@@ -18,13 +19,13 @@
         "text": "菜单"
       },
       {
-        "pagePath": "pages/order/order",
-        "text": "订单"
+        "pagePath" : "pages/shoppingList/shoppingList",
+        "text": "购物车"
       }
     ],
     "backgroundColor": "#ffffff",
     "selectedColor":"#FFCA0D",
-    "position":"top"
+    "position":"bottom"
   },
   "debug":"true"
 }

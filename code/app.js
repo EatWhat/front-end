@@ -33,6 +33,7 @@ App({
         }
       }
     })
+    // 获取用户信息 todo
 
     // 获取商家信息
     wx.request({
@@ -55,6 +56,7 @@ App({
   globalData: {
     userInfo: null,
     shoppingCart: {},
+    // { food_id: {food_id:1, food_name: "", price: 0.0, amount: 1}, food_id:{food_id:1, food_name: "", price: 0.0, amount: 1}}
     restInfo: {
       "restaurant_id": 1,
       "phone": 10000,
@@ -63,9 +65,9 @@ App({
               "food_id": 1,
               "food_type": "staple",
               "food_name": "麻辣香锅",
-              "price": 25.0,
+              "price": 2005.0,
               "num": 10,
-              "image_url": "/img/1.png",
+              "image_url": "/img/omelet.jpg",
               "detail": "1"
           },
           {
@@ -94,6 +96,26 @@ App({
               "num": 10,
               "image_url": "/img/4.png",
               "detail": "4"
+          }
+          ,
+          {
+            "food_id": 5,
+            "food_type": "snack",
+            "food_name": "鸡翅1",
+            "price": 11.0,
+            "num": 10,
+            "image_url": "/img/4.png",
+            "detail": "4"
+          }
+          ,
+          {
+            "food_id": 6,
+            "food_type": "snack",
+            "food_name": "鸡翅2",
+            "price": 12.0,
+            "num": 10,
+            "image_url": "/img/4.png",
+            "detail": "4"
           }
       ]
     }

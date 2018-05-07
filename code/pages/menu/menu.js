@@ -107,6 +107,7 @@ Page({
       },
       foodList: foodList
     })
+    console.log(foodList)
   },
   addButtonClick: function(e) {
     if(!app.globalData.shoppingCart[e.target.dataset.item.food_id])
