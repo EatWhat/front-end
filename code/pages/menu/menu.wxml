@@ -44,8 +44,11 @@
                       <text style="font-size: 20rpx">{{item.detail}}</text>
                     </view>
                     <view class="col-flex">
-                      <text>{{item.price}}</text>
-                      <button class="add-button" bindtap="addButtonClick" data-item="{{item}}"></button>
+                      <text>{{item.price}}元</text>
+                      <button class="add-button" hover = "true" hover-class = "red_hover"
+                      bindtap="addButtonClick" data-item="{{item}}">
+                        <view class='button-text'>+</view>
+                      </button>
                     </view>
                     
                   </view>

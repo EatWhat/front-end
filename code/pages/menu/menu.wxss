@@ -99,8 +99,8 @@
 }
 
 .dish-image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 150rpx;
+  height: 140rpx;
 }
 
 .col-flex {
@@ -112,12 +112,23 @@
 }
 
 .add-button {
-  margin: 0;
-  padding: 0;
   color: #0000F0;
   background-color: #ffe500;
-  display: block;
   overflow: hidden;
-  height: 20px;
-  width: 20px;
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.red_hover{
+  border:2rpx solid red;
+}
+
+.button-text {
+  margin-top:-12px;
+}
+
+.food-name-bar {
+  
 }
