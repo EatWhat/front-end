@@ -1,9 +1,6 @@
 <!--menu-->
-<view class="row">
-  <view class="col">
-    <button bindtap="getlocation">Get Location</button>
-    <button bindtap="getUrlFromQR">Scan QR</button>
-  </view>
+<view class="rest-name">
+  {{restaurant_name}}
 </view>
 
 <view class="row" style="height: 100%;">
@@ -26,7 +23,7 @@
       <block wx:for="{{foodList}}">
         <view id="{{item.foodType}}">
           <view class="row">
-            <view class="col" style="color:red;">
+            <view class="col" style="color:#ffc700;">
               {{item.foodType}}
             </view>
           </view>

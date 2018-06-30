@@ -82,7 +82,7 @@
 }
 
 .background_corlor{
-  color:red;
+  color:#ffc700;
   background: #F8F8F8;
 }
 
@@ -101,6 +101,7 @@
 .dish-image {
   width: 150rpx;
   height: 140rpx;
+  border-radius:10rpx;
 }
 
 .col-flex {
@@ -112,8 +113,8 @@
 }
 
 .add-button {
-  color: #0000F0;
-  background-color: #ffe500;
+  color: white;
+  background-color: #ffc700;
   overflow: hidden;
   height: 50rpx;
   width: 50rpx;
@@ -131,4 +132,13 @@
 
 .food-name-bar {
   
+}
+
+.rest-name {
+  text-align:center;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-size:25px;
+  background-color: #ffc700;
+  color: white;
 }

@@ -1,8 +1,9 @@
-/**index.wxss**/
+/**userLogin.wxss**/
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30%;
 }
 
 .userinfo-avatar {
@@ -16,12 +17,14 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 50px;
-  font-size: 50px;
-}
-
 .test{
   margin-top: 100px;
   color: green; 
+}
+
+.qrscan-bth{
+  color: green;
+  margin-top:10%;
+  width:100px;
+  background-color: #F0F0F0;
 }

@@ -1,7 +1,9 @@
 <view class="container">
+  <view class="head">
+    {{table_No ? "餐桌号：" + table_No : "外卖"}}
+  </view>
 
-
-  <view class = "top-bar" style = "display:flex;flex-direction:row;justify-content:space-around;">
+  <view class = "top-bar">
     <view class = "bar_name">菜名</view>
     <view class = "bar_price">价格</view>
     <view class = "bar_amount">数量</view>

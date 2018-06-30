@@ -3,7 +3,7 @@
 .container {
   margin: 0;
   padding: 0;
-  background-color: #EEEEEE;
+  background-color: #F8F8F8;
 }
 
 .column {
@@ -19,7 +19,7 @@
 
 .shop-list {
   margin:5px;
-  border-bottom:5px solid #EEEEEE;
+  border-bottom:5px solid #F8F8F8;
 }
 
 .shop-item {
@@ -35,27 +35,22 @@
 }
 
 .minusButton{
-  color: #0000F0;
-  background-color: #ffe500;
-  display: block;
+  color: white;
+  background-color: #ffc700;
   overflow: hidden;
   height: 50rpx;
   width: 50rpx;
-  text-align: center;
   border-radius: 50%;
-  margin: 0;
   padding: 0;
 }
 
 .addButton{
-  color: #0000F0;
-  background-color: #ffe500;
+  color: white;
+  background-color: #ffc700;
   overflow: hidden;
   height: 50rpx;
   width: 50rpx;
-  text-align: center;
   border-radius: 50%;
-  margin: 0;
   padding: 0;
 }
 
@@ -83,4 +78,21 @@
   width:25%;
   display:flex;
   justify-content:space-around;
+}
+
+.head {
+  text-align:center;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-size:25px;
+  background-color:#ffc700;
+  color:white;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  margin:5px;
 }

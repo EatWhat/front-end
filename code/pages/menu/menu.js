@@ -15,27 +15,6 @@ Page({
   controltap(e) {
     console.log(e.controlId)
   },
-  getlocation(e) {
-    wx.getLocation({
-      type: 'wgs84',
-      success: (res) => {
-        var latitude = res.latitude // 经度
-        var longitude = res.longitude // 纬度
-        this.setData({
-          location: latitude + ' ' + longitude
-        })
-        console.log(this.data.location)
-      }
-    })
-  },
-  getUrlFromQR(e) {
-    // 允许从相机和相册扫码
-    wx.scanCode({
-      success: (res) => {
-        console.log(res)
-      }
-    })
-  },
   toOrderPage: function (e) {
     wx.navigateTo({
       url: '../order/order',
@@ -61,26 +40,23 @@ Page({
     })
   },
   onLoad: function () {
-    // if (app.globalData.restInfo) {
-    //   this.setData({
-    //     restInfo: app.globalData.restInfo,
-    //   })
-    // } else {
-    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //   // 所以此处加入 callback 以防止这种情况
-    //   app.restInfoReadyCallback = res => {
-    //     this.setData({
-    //       restInfo: res.restInfo
-    //     })
-    //   }
-    // }
-
-    // 模拟网络请求
     if (app.globalData.restInfo) {
       this.setData({
         restInfo: app.globalData.restInfo,
+        restaurant_name: app.globalData.restInfo.restaurant_name
       })
+    } else {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.restInfoReadyCallback = res => {
+        this.setData({
+          restInfo: res.restInfo,
+          restaurant_name: app.globalData.restInfo.restaurant_name
+        })
+      }
     }
+
+    console.log(this.data.restaurant_name)
 
     var foodList = []
     var foodType = []
@@ -125,6 +101,23 @@ Page({
       }
     else
       app.globalData.shoppingCart[e.target.dataset.item.food_id].amount++
-    console.log(app.globalData.shoppingCart)
+
+    var has_this_food_id = false
+    for (var i in app.globalData.private_shopping_list) {
+      if (app.globalData.private_shopping_list[i].food_id == e.target.dataset.item.food_id) {
+        app.globalData.private_shopping_list[i].num++
+        has_this_food_id = true  
+        break
+      }
+    }
+
+    if (has_this_food_id == false)
+      app.globalData.private_shopping_list.push({
+        food_id: e.target.dataset.item.food_id, 
+        num: 1
+      })
+    
+    console.log('public shopping list: ', app.globalData.shoppingCart)
+    console.log('private shopping list: ', app.globalData.private_shopping_list)
   }
 })

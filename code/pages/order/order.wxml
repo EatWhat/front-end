@@ -1,5 +1,8 @@
  <!--order-->
 <view class="container">
+  <view class="header">
+    订单
+  </view>
   <view class="column userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <view class="row userinfo-detail">
@@ -11,8 +14,8 @@
           {{userDetailInfo.phone}}
         </view>
       </view>
-      <view>
-        {{userDetailInfo.address}}
+      <view style="text-align: center;">
+        {{table_No ? table_No + " 号桌" : userDetailInfo.address}}
       </view>
     </view>
   </view>

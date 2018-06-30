@@ -28,6 +28,11 @@ Page({
         userDetailInfo: {name: "张三", phone: "10000", address: "中山大学"}
       })
     }
+    if (app.globalData.table_No) {
+      this.setData({
+        table_No: app.globalData.table_No
+      })
+    }
     var total_price = 0.0;
     const shop_list = this.data.shopList;
   },
@@ -65,16 +70,20 @@ Page({
     }
     
     var request = {
-      customer_id: 'zyf',
+      customer_id: app.globalData.customer_id,
       restaurant_id: app.globalData.restInfo.restaurant_id,
       date: util.formatTime(date),
       price: this.data.totalPrice,
       food: shoppingCart
     }
+
+    if (app.globalData.table_No) {
+      request.table_No = app.globalData.table_No
+    }
     console.log(request)
 
     wx.request({
-      url: 'http://localhost:8888/',
+      url: app.globalData.host + "/table_order",
       data: request,
       method: 'POST',
       header: {
