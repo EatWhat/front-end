@@ -56,7 +56,7 @@ Page({
       }
     }
 
-    console.log(this.data.restaurant_name)
+    console.log("restaurant name:", this.data.restaurant_name)
 
     var foodList = []
     var foodType = []
@@ -70,6 +70,7 @@ Page({
         k++
       }
     }
+
     for (var i = 0, l = foodType.length; i < l; i++) {
       foodList.push({ "foodType": foodType[i], item: [] })
     }
@@ -78,7 +79,9 @@ Page({
         this.data.restInfo.food[i]
       )
     }
-    foodList[0].toggle = true;
+
+    if (this.data.restInfo.food.length > 0) 
+      foodList[0].toggle = true;
     this.setData({
       restInfo: {
         restaurantID: this.data.restInfo.restaurant_id,
