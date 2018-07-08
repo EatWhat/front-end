@@ -90,8 +90,7 @@ Page({
             console.log(res)
             app.globalData.restInfo = res.data.result
             // 恢复餐桌的购物车列表
-            console.log(typeof(app.globalData.restInfo.private_shopping_list))
-            app.globalData.private_shopping_list = app.globalData.restInfo.private_shopping_list
+            app.globalData.private_shopping_list = JSON.parse(app.globalData.restInfo.private_shopping_list)
 
             if (app.globalData.restInfo.public_shopping_list) {
               for (var i in app.globalData.restInfo.public_shopping_list) {

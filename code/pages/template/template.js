@@ -20,16 +20,12 @@ function tabbarinit() {
 }
 
 //tabbar 主入口
-function tabbarmain(bindName = "tabbar", id, target) {
+function tabbarmain(bindName = "tabdata", id, target) {
     var that = target;
     var bindData = {};
     var otabbar = tabbarinit();
-
-    //替换icon为选中状态
-    otabbar[id]['iconPath'] = otabbar[id]['selectedIconPath']
+    otabbar[id]['iconPath'] = otabbar[id]['selectedIconPath']//换当前的icon
     otabbar[id]['current'] = 1;
-
-    //更新data
     bindData[bindName] = otabbar
     that.setData({ bindData });
 }
